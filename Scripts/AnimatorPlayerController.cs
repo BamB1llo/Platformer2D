@@ -1,6 +1,4 @@
-using UnityEngine;
-
-public class AnimatorPlayerController : MonoBehaviour
+public class AnimatorPlayerController
 {
     public static class States
     {

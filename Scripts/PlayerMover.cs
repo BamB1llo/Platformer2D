@@ -28,12 +28,12 @@ public class PlayerMover : MonoBehaviour
     private void Update()
     {
         _animator.SetInteger(AnimatorPlayerController.States.MotionState, _motionState);
-        TryMove();
+        Move();
         CheckingGround();
-        TryJump();
+        Jump();
     }
 
-    private void TryMove()
+    private void Move()
     {
         _curentSpeed = Input.GetAxisRaw("Horizontal") * _movementSpeed;
 
@@ -51,7 +51,7 @@ public class PlayerMover : MonoBehaviour
         Flip();
     }
 
-    private void TryJump()
+    private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && _onGround)
         {
